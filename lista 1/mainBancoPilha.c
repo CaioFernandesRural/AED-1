@@ -1,4 +1,4 @@
-#include "banco.h"
+#include "bancoPilha.h"
 
 /*
 a) cada cliente do banco possui os seguintes dados : nome . endereço, telefone , cpf e saldo.
@@ -12,13 +12,13 @@ d) retirar um cliente.
 
 void main(){
 
-    Lista *clientes = (Lista*) malloc (sizeof(Lista));
+    Pilha *clientes = (Pilha*) malloc (sizeof(Pilha));
     int capacidade;
 
-    printf("\nCapacidade da lista: ");
+    printf("\nCapacidade da Pilha: ");
     scanf("%d",&capacidade);
 
-    criarLista(clientes, capacidade);
+    criarPilha(clientes, capacidade);
 
     menu(clientes);
 }

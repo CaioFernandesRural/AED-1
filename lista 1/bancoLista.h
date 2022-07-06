@@ -1,5 +1,5 @@
-#ifndef __BANCO__
-#define __BANCO__
+#ifndef __BANCOLISTA__
+#define __BANCOLISTA__
 
 #include <stdio.h>
 #include <stdlib.h>
