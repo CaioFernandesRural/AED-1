@@ -98,9 +98,9 @@ void valores (node *Lista){
     node *tmp;
     tmp = Lista->prox;
 
-    int mai, men, soma;
-    mai = Lista->num;
-    men = Lista->num;
+    int mai, men, soma = 0;
+    mai = tmp->num;
+    men = tmp->num;
     
     printf("\n");
 
@@ -111,9 +111,9 @@ void valores (node *Lista){
         soma += tmp->num;
         tmp = tmp->prox;
     }
-
+    float media = (soma / elementos(Lista)); //não funcionava sem essa variavel
     printf("\nMaior: %d /Menor: %d", mai, men);
-    printf("\nMedia: %.2f", (soma / elementos(Lista)));
+    printf("\nMedia: %.2f", media);
 }
 int menu (){
     int esc;
