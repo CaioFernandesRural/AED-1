@@ -79,7 +79,7 @@ void insereInicio(node *Lista, int x){
     novo->num = x;
     novo->prox = oldHead;
 }
-void exibeInv (node *Lista){ //pedir ajuda p paulo rs
+void exibeInv (node *Lista){
 
     if (vazia(Lista)){
         return NULL;
@@ -87,7 +87,7 @@ void exibeInv (node *Lista){ //pedir ajuda p paulo rs
 
 	exibeInv(Lista->prox);
 
-	printf("  %d  ", Lista->num);
+	printf("  %d  ", Lista->prox->num);
 	
 }
 void valores (node *Lista){
