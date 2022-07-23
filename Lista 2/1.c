@@ -165,6 +165,12 @@ void menuAtivo(node *Lista, int esc) {
             printf("\nA lista tem %d elementos\n", elementos(Lista));
 			
 	    case 7:
+            //maior e segundo maior
+        case 8:
+            //ordenada
+        case 9:
+            //nova inversa
+        case 10:
 			break;
 		
 		default:
@@ -181,7 +187,7 @@ int main () {
     do{
         esc = menu();
         menuAtivo(Lista, esc);
-    } while (esc != 7);
+    } while (esc != 10);
     
     free(Lista);
     return 1;
