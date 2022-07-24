@@ -115,6 +115,28 @@ void valores (node *Lista){
     printf("\nMaior: %d /Menor: %d", mai, men);
     printf("\nMedia: %.2f", media);
 }
+void maiorMaior(node *Lista){
+    if (vazia(Lista)){
+        return NULL;
+    }
+    node *tmp;
+    tmp = Lista->prox;
+
+    int mai, MAI;
+    MAI = tmp->num;
+    mai = tmp->num;
+
+    while (tmp != NULL){
+        if (tmp->num > MAI){ MAI = tmp->num;}
+        tmp = tmp->prox;
+    }
+    tmp = Lista->prox;
+    while (tmp != NULL){
+        if (tmp->num > mai && tmp->num != MAI){ mai = tmp->num;}
+        tmp = tmp->prox;
+    }
+    printf("\n\nMAIOR: %d /maior: %d", MAI, mai);
+}
 int menu (){
     int esc;
 	
@@ -165,7 +187,8 @@ void menuAtivo(node *Lista, int esc) {
             printf("\nA lista tem %d elementos\n", elementos(Lista));
 			
 	    case 7:
-            //maior e segundo maior
+            maiorMaior(Lista);
+            break;
         case 8:
             //ordenada
         case 9:
