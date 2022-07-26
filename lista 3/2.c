@@ -36,19 +36,12 @@ void insere(node *Lista, int x){
 
     novo->prox = NULL;
     novo->num = x;
-    if (vazia(Lista)){
-        Lista->prox = novo;
-    }
-    else {
-        node *tmp = Lista->prox;
 
-        while (tmp->prox != NULL)
-        {
-            tmp = tmp->prox;
-        }
-        tmp->prox = novo;  
-    }
-    
+    node *oldHead = Lista->prox;
+
+    Lista->prox = novo;
+    novo->num = x;
+    novo->prox = oldHead;
 }
 void remover(node *Lista){
     node *tmp;
