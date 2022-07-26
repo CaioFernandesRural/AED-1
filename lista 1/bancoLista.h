@@ -25,7 +25,7 @@ void criarLista( Lista *f, int c){
 }
 
 int acharCadastro(Lista *f, int cpf){
-    for (int i = 0; i < f->ultimo ; i++)
+    for (int i = 0; i <= f->ultimo ; i++)
     {
         if (f->dados[i].cpf == cpf){
             return i;
