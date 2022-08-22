@@ -154,22 +154,26 @@ node * criaLista(node *LISTA,int n)
 	return(LISTA);
 }
 
-node * busca(node *LISTA, int x, node ** ant)
-{ node *ptr ;
-  *ant = LISTA ;
-  ptr = NULL ;	
-  if(vazia(LISTA)) return NULL ;
-               else 
-               { ptr = LISTA->prox;
-				 while (ptr != NULL) 
-				     if (ptr->num == x)  break ;
-				                         else 
-				                           { *ant = ptr ;
-					                        ptr = ptr->prox ;}
-					                
-					                
-				return ptr ;     
-               }	
+node * busca(node *LISTA, int x, node ** ant){
+	node *ptr ;
+	*ant = LISTA ;
+	ptr = NULL ;	
+	if(vazia(LISTA)) {
+		return NULL
+	} ;
+    else { 
+		ptr = LISTA->prox;
+		while (ptr != NULL) {
+			if (ptr->num == x){
+				break
+			};
+			else{ 
+				*ant = ptr ;
+				ptr = ptr->prox ;
+			}
+		}
+		return ptr ;     
+    }	
 }
  
  int removeLista(node *LISTA, int x)
