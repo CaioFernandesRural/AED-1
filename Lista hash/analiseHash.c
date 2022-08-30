@@ -33,8 +33,8 @@ void insereHash(Hash tab, int x){
         }
         tmp = tmp->prox;
     }
-    if (tmp == NULL) //so insere se estiver no final
-    {                //ou seja, sem elementos repetidos
+    if (tmp == NULL){ //so insere se estiver no final
+                      //ou seja, sem elementos repetidos
         tmp = (Dados*) malloc(sizeof(Dados));
         tmp->info = x;
         tmp->prox = tab[chave];
