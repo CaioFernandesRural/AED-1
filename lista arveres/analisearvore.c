@@ -86,8 +86,8 @@ no *deletar_no(no *r, int x){
     if (r == NULL){
         return NULL;
     }
-    else if (r->info == x){
-        if (r->esq == r->dir){
+    else if (r->info == x){ 
+        if (r->esq == r->dir){ //bloco p 0 ou um ramo
             free(r);
             return NULL;
         }
@@ -109,7 +109,7 @@ no *deletar_no(no *r, int x){
             r->esq = NULL;
         }
 
-        else {
+        else { //bloco p dois ramos
             pt = r;
             pt1 = r->esq;
             if (pt->dir = NULL){
